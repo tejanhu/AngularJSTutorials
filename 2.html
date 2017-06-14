@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<!--ng => Angular-->
+<!--//ng-app: allows Angular to understand where to process this app-->
+
+<html lang="en" ng-app=""> 
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS | Hands On!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+<body>
+    <!--//ng-model: attaches whatever you type in this input box to a special location known as 'name'-->
+    <input type="text" ng-model="name">
+    <div>Hello {{name}}</div>
+</body>
+</html>

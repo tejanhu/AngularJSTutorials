@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myLanguageApp"> 
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS | Controllers</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+<body>
+
+    <div ng-controller="languages">
+
+        Select Your Favourite Language: 
+        <button ng-click="wolof()">Wolof</button> 
+        <button ng-click="mandinka()">Mandinka</button> 
+        <button ng-click="fula()">Fula</button> 
+        <button ng-click="serahuli()">Serahuleh</button> 
+        <button ng-click="jola()">Jola</button>
+        <button ng-click="manjago()">Manjago</button>  
+        <button ng-click="serer()">Serer</button> 
+        <button ng-click="cre()">Creole</button> 
+        <button ng-click="ar()">Arabic</button>
+
+        <p>You have selected: {{ myFavLanguage }}</p>
+    </div>
+
+<script>
+    var application = angular.module('myLanguageApp', []);
+    application.controller('languages', function($scope){
+        $scope.myFavLanguage = 'None';
+
+        $scope.wolof = function(){
+            $scope.myFavLanguage = 'Wolof';
+        };
+        $scope.mandinka = function(){
+            $scope.myFavLanguage = 'Mandinka';
+        };
+        $scope.fula = function(){
+            $scope.myFavLanguage = 'Fula';
+        };
+        $scope.serahuli = function(){
+            $scope.myFavLanguage = 'Serahuleh';
+        };
+        $scope.jola = function(){
+            $scope.myFavLanguage = 'Jola';
+        };     
+        $scope.manjago = function(){
+            $scope.myFavLanguage = 'Manjago';
+        };
+        $scope.serer = function(){
+            $scope.myFavLanguage = 'Serer';
+        };
+        $scope.cre = function(){
+            $scope.myFavLanguage = 'Creole';
+        };
+        $scope.ar = function(){
+            $scope.myFavLanguage = 'Arabic';
+        };
+
+    });
+</script>
+
+</body>
+</html>
